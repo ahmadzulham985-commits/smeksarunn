@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMEKSA FUN RUN 5K - OSIS SMKN 1 Bantaeng</title>
     <meta name="description" content="Pendaftaran resmi SMEKSA Fun Run 5K bersama OSIS SMKN 1 Bantaeng. Mari sehat dan berlari bersama!">
-
+    
     <!-- Google Fonts: Lexend & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -491,7 +491,7 @@
 
         .pricing-card {
             background: var(--color-bg-white);
-            border: 1.5px solid var(--color-border);
+            border: 2px solid var(--color-border);
             border-radius: var(--radius-xl);
             padding: 42px 36px;
             box-shadow: var(--shadow-sm);
@@ -500,15 +500,17 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            -webkit-tap-highlight-color: transparent;
         }
-        
-.pricing-card:hover,
-.pricing-card:active {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-8px);
-    border: 2px solid var(--color-primary);
-    background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 35%);
-}
+
+        .pricing-card:hover,
+        .pricing-card:active,
+        .pricing-card:focus-within {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-8px);
+            border-color: var(--color-primary);
+            background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 35%);
+        }
 
         .popular-ribbon {
             position: absolute;
@@ -959,7 +961,7 @@
         }
 
         /* ==========================================================================
-           RESPONSIVE MEDIA QUERIES
+           RESPONSIVE MEDIA QUERIES (PC, TABLET, MOBILE)
            ========================================================================== */
         @media (max-width: 992px) {
             .countdown-card {
@@ -1140,7 +1142,7 @@
             
             <div class="pricing-grid">
                 <!-- Card 1 (Link Google Form Pack 1) -->
-                <div class="pricing-card reveal delay-1">
+                <div class="pricing-card reveal delay-1" tabindex="0">
                     <div class="popular-ribbon">
                         <i class="fa-solid fa-star"></i> LENGKAP
                     </div>
@@ -1159,7 +1161,7 @@
                 </div>
 
                 <!-- Card 2 (Link Google Form Pack 2) -->
-                <div class="pricing-card reveal delay-2">
+                <div class="pricing-card reveal delay-2" tabindex="0">
                     <div class="pkg-name">PACK 2 (REGULER)</div>
                     <div class="pkg-desc">Paket ekonomis tetap dapat medali & kesempatan doorprize</div>
                     <div class="pkg-price">Rp 95.000 <span>/ peserta</span></div>
